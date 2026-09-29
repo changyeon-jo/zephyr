@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+common:
+  tags:
+    - drivers
+    - video
+  harness: ztest
+
+tests:
+  video.encoder.h264.sw_h264enc:
+    platform_allow:
+      - native_sim
+      - native_sim/native/64
+      - qemu_x86
+      - mps2/an521/cpu0
+    integration_platforms:
+      - native_sim/native/64
+    extra_args:
+      - SNIPPET="video-sw-h264enc"
+  video.encoder.h264.stm32_venc:
+    platform_allow:
+      - stm32n6570_dk/stm32n657xx/sb
+    integration_platforms:
+      - stm32n6570_dk/stm32n657xx/sb
+    filter: dt_chosen_enabled("zephyr,videoenc")
