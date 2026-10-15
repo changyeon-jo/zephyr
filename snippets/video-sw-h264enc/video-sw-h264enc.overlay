@@ -1,0 +1,14 @@
+/*
+ * SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/ {
+	chosen {
+		zephyr,videoenc = &video_sw_h264enc;
+	};
+
+	video_sw_h264enc: video-sw-h264enc {
+		compatible = "zephyr,video-sw-h264enc";
+	};
+};

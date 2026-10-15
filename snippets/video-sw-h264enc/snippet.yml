@@ -1,0 +1,5 @@
+name: video-sw-h264enc
+description: |
+  Instantiates a software H.264 encoder as the zephyr,videoenc chosen node.
+append:
+  EXTRA_DTC_OVERLAY_FILE: video-sw-h264enc.overlay
