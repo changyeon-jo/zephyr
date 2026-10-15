@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+config VIDEO_SW_H264ENC
+	bool "Software H.264 encoder"
+	default y
+	depends on DT_HAS_ZEPHYR_VIDEO_SW_H264ENC_ENABLED
+	depends on VIDEO_ENCODER_H264
+	help
+	  Enable a minimal software H.264 encoder, for testing purposes.
+	  It produces valid Constrained Baseline streams made of uncompressed
+	  (I_PCM) and skipped macroblocks only, so the output is large. It is
+	  meant to exercise video encoder APIs on any platform, including
+	  native_sim, and not for production use.

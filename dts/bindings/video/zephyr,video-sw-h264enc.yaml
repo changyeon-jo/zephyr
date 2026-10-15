@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+  Software H.264 encoder for testing. It produces valid but uncompressed
+  streams and is meant to exercise video encoder APIs on any platform.
+
+compatible: "zephyr,video-sw-h264enc"
